@@ -5,174 +5,166 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>PULSE Advisory Group | Failure-to-Rescue Case Intelligence</title>
-<meta name="description" content="Structured failure-to-rescue case intelligence for attorneys handling high-risk medical cases. Early-phase, non-testifying, system-level analysis.">
+<meta name="description" content="Structured failure-to-rescue case intelligence for high-stakes medical cases. Early-phase, non-testifying, system-level analysis.">
 
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=IBM+Plex+Sans:300,400,500&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --bg:#0b0f14;
-  --panel:#11161d;
-  --text:#e8ecf1;
-  --muted:#9aa3ad;
-  --accent:#6fa8ff;
-  --border:#1c2430;
+--bg:#0a0e13;
+--panel:#11161c;
+--text:#e9edf2;
+--muted:#97a1ab;
+--accent:#6fa8ff;
+--border:#1b2430;
 }
 
-*{box-sizing:border-box;margin:0;padding:0;}
+*{margin:0;padding:0;box-sizing:border-box;}
+
+html{scroll-behavior:smooth;}
 
 body{
-  font-family:'IBM Plex Sans', sans-serif;
-  background:var(--bg);
-  color:var(--text);
-  line-height:1.5;
+font-family:'IBM Plex Sans',sans-serif;
+background:var(--bg);
+color:var(--text);
+line-height:1.5;
 }
 
 .container{
-  max-width:980px;
-  margin:0 auto;
-  padding:70px 20px;
+max-width:960px;
+margin:0 auto;
+padding:80px 20px;
 }
 
-h1,h2,h3{
-  font-family:'Fraunces', serif;
-  font-weight:500;
-  letter-spacing:-0.01em;
+h1,h2{
+font-family:'Fraunces',serif;
+font-weight:500;
+letter-spacing:-0.01em;
 }
 
-h1{font-size:40px;}
+h1{font-size:38px;}
 h2{font-size:26px;margin-bottom:16px;}
-p{color:var(--muted);}
+
+p{color:var(--muted);max-width:620px;}
 
 section{border-bottom:1px solid var(--border);}
 
-.hero{
-  padding-top:90px;
-}
-
-.hero-inner{
-  max-width:640px;
-}
-
 .logo{
-  width:52px;
-  margin-bottom:30px;
+width:48px;
+margin-bottom:28px;
 }
 
 .cta{
-  display:inline-block;
-  margin-top:28px;
-  padding:14px 22px;
-  background:var(--accent);
-  color:#000;
-  text-decoration:none;
-  font-weight:500;
-  border-radius:4px;
+display:inline-block;
+margin-top:28px;
+padding:14px 22px;
+background:var(--accent);
+color:#000;
+text-decoration:none;
+border-radius:4px;
+font-weight:500;
+transition:opacity .2s ease;
 }
 
-.cta:hover{opacity:0.9;}
+.cta:hover{opacity:.9;}
 
 .grid{
-  display:grid;
-  gap:40px;
+display:grid;
+gap:40px;
 }
 
 @media(min-width:900px){
-  .grid-2{
-    grid-template-columns:1fr 1fr;
-  }
+.grid-2{grid-template-columns:1fr 1fr;}
 }
 
 .card{
-  background:var(--panel);
-  padding:24px;
-  border:1px solid var(--border);
+background:var(--panel);
+padding:26px;
+border:1px solid var(--border);
 }
 
 .doc{
-  background:#fff;
-  color:#000;
-  padding:28px;
-  border-radius:2px;
-  max-height:520px;
-  overflow:auto;
-  font-size:13px;
-  line-height:1.4;
+background:#fff;
+color:#000;
+padding:28px;
+max-height:520px;
+overflow:auto;
+font-size:13px;
+line-height:1.45;
 }
 
-.doc h4{
-  font-size:14px;
-  margin-bottom:10px;
-}
+.doc strong{display:block;margin-top:12px;}
 
-ul{
-  margin-top:12px;
-}
-
-li{
-  margin-bottom:6px;
-  color:var(--muted);
-}
+ul{margin-top:12px;}
+li{margin-bottom:6px;color:var(--muted);}
 
 input,textarea{
-  width:100%;
-  padding:12px;
-  margin-top:10px;
-  background:#0b0f14;
-  border:1px solid var(--border);
-  color:#fff;
+width:100%;
+padding:12px;
+margin-top:10px;
+background:#0a0e13;
+border:1px solid var(--border);
+color:#fff;
+}
+
+input:focus,textarea:focus{
+outline:none;
+border-color:var(--accent);
 }
 
 button{
-  margin-top:18px;
-  padding:14px;
-  background:var(--accent);
-  border:none;
-  cursor:pointer;
+margin-top:18px;
+padding:14px;
+background:var(--accent);
+border:none;
+cursor:pointer;
 }
 
 .success{
-  display:none;
-  margin-top:10px;
-  color:#7fffaa;
+display:none;
+margin-top:10px;
+color:#7fffaa;
+}
+
+.error{
+color:#ff7a7a;
+font-size:12px;
 }
 </style>
 </head>
 
 <body>
 
-<section class="hero">
+<section>
 <div class="container">
-<div class="hero-inner">
 
 <svg class="logo" viewBox="0 0 100 100">
 <path d="M50 10 L50 90" stroke="#6fa8ff" stroke-width="3"/>
-<path d="M30 30 C50 20, 50 80, 70 70" stroke="#6fa8ff" fill="none" stroke-width="2"/>
-<path d="M70 30 C50 20, 50 80, 30 70" stroke="#6fa8ff" fill="none" stroke-width="2"/>
+<path d="M30 30 C50 20,50 80,70 70" stroke="#6fa8ff" fill="none" stroke-width="2"/>
+<path d="M70 30 C50 20,50 80,30 70" stroke="#6fa8ff" fill="none" stroke-width="2"/>
 </svg>
 
-<h1>When a case feels wrong but you cannot prove it, this is where it becomes clear</h1>
+<h1>When a case feels wrong but the structure is missing, this is where it becomes clear</h1>
 
-<p>Structured failure-to-rescue analysis that converts clinical events into defensible system-level findings before expert engagement.</p>
+<p>Early-phase failure-to-rescue analysis that converts clinical events into defensible system-level findings before expert engagement.</p>
 
 <a href="#contact" class="cta">Submit a case for triage</a>
 
-</div>
 </div>
 </section>
 
 <section>
 <div class="container">
-<h2>What attorneys are dealing with</h2>
-<p>Records suggest deterioration, delay, or missed escalation. The sequence is unclear. Responsibility is diffuse. The narrative does not hold.</p>
-<p>Critical system failures are present but not structured. Without that structure, cases weaken or stall.</p>
+<h2>What is happening in these cases</h2>
+<p>Delay, deterioration, and missed escalation appear across the record. Responsibility is unclear. The narrative does not hold under scrutiny.</p>
+<p>Without structure, system-level failure remains hidden and the case weakens.</p>
 </div>
 </section>
 
 <section>
 <div class="container">
 <h2>What changes with structured analysis</h2>
-<p>The event is reconstructed. Failure points are mapped. Institutional contributors become visible. The case shifts from isolated error to system-level exposure.</p>
+<p>The event is reconstructed, failure pathways are identified, and institutional contributors become visible. The case shifts from isolated error to system exposure.</p>
 </div>
 </section>
 
@@ -181,39 +173,30 @@ button{
 
 <div>
 <h2>What you receive</h2>
-
 <ul>
-<li>Chronology reconstructed from records and accounts</li>
-<li>Failure-to-rescue pathway identification</li>
-<li>System and governance breakdown mapping</li>
-<li>Discovery targets and record gaps</li>
+<li>Chronology reconstructed</li>
+<li>Failure-to-rescue pathway mapping</li>
+<li>System and governance breakdowns</li>
+<li>Discovery targets</li>
 <li>Liability expansion pathways</li>
 </ul>
-
-<p style="margin-top:18px;">
-<a href="https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22Torrez%2C%20Jennifer%22" target="_blank">Review published work</a>
-</p>
-
 </div>
 
 <div class="card">
 <div class="doc">
+<h3>Analytic Exemplar</h3>
 
-<h4>Analytic Exemplar</h4>
+<strong>Context</strong>
+Patient required intervention unavailable at facility. Transfer delayed.
 
-<p><strong>Case context</strong></p>
-<p>Patient required intervention unavailable at admitting facility. Transfer delayed several days. Risk remained active.</p>
+<strong>Event</strong>
+Cardiac arrest occurred during delay. Post-event care misaligned with acuity.
 
-<p><strong>Event</strong></p>
-<p>Cardiac arrest occurred during delay. Post-event care proceeded without consistent ICU-level staffing.</p>
+<strong>Breakdowns</strong>
+Transfer coordination failure, staffing mismatch, absent specialist response.
 
-<p><strong>System breakdowns</strong></p>
-<p>Transfer coordination failure, staffing misalignment, absence of in-person specialist response.</p>
-
-<p><strong>Implications</strong></p>
-<p>Findings support failure-to-rescue pathways driven by system design rather than isolated clinical error.</p>
-
-<p style="margin-top:12px;">Source: Analytic exemplar sample :contentReference[oaicite:0]{index=0}</p>
+<strong>Implications</strong>
+Findings support system-driven failure-to-rescue pathway.
 
 </div>
 </div>
@@ -224,15 +207,14 @@ button{
 <section>
 <div class="container">
 <h2>How engagement works</h2>
-<p>Initial triage establishes fit, urgency, and scope. Engagements are fixed-fee and defined in advance. Work proceeds independently with structured delivery.</p>
+<p>Triage establishes fit and urgency. Engagement is fixed-fee and scoped. Work proceeds independently with structured delivery.</p>
 </div>
 </section>
 
 <section>
 <div class="container">
 <h2>What this is not</h2>
-<p>This is not chart review. This is not legal nurse consulting. This is not expert testimony.</p>
-<p>This is early-phase case intelligence that changes how a case is understood and pursued.</p>
+<p>This is not chart review or standard consulting. This is structured case intelligence used before expert engagement.</p>
 </div>
 </section>
 
@@ -240,17 +222,16 @@ button{
 <div class="container">
 <h2>Founder</h2>
 <p>Jennifer Torrez, BSN RN</p>
-<p>Critical care and rapid response background. Systems-level failure-to-rescue analysis. Policy and systems leadership within global patient safety work.</p>
-<p><a href="http://failuretorescue.substack.com/" target="_blank">Publications</a></p>
+<p>Critical care and rapid response background. Systems-level failure-to-rescue analysis and policy work.</p>
 </div>
 </section>
 
 <section>
 <div class="container">
 <h2>Engagement</h2>
-<p>Triage call: $500, applied to engagement</p>
-<p>Case review: typically $15,000 to $45,000 depending on scope</p>
-<p>Work is limited to a small number of cases at a time</p>
+<p>Triage: $500 applied to engagement</p>
+<p>Case review: typically $15,000 to $45,000</p>
+<p>Limited number of active cases</p>
 </div>
 </section>
 
@@ -258,17 +239,10 @@ button{
 <div class="container">
 <h2>Common questions</h2>
 
-<p><strong>Is this expert testimony?</strong><br>
-No. Work is pre-expert and non-testifying.</p>
-
-<p><strong>When is this used?</strong><br>
-Early in case evaluation or when strategy needs to shift.</p>
-
-<p><strong>How fast is delivery?</strong><br>
-Most engagements complete within 30 to 60 days.</p>
-
-<p><strong>What cases are a fit?</strong><br>
-High-risk clinical events involving delay, deterioration, or unclear responsibility.</p>
+<p><strong>Is this expert work?</strong><br>No. Pre-expert and non-testifying.</p>
+<p><strong>When is this used?</strong><br>Early case evaluation or strategic shift.</p>
+<p><strong>Timeline?</strong><br>30 to 60 days typical.</p>
+<p><strong>Case fit?</strong><br>High-risk clinical events with unclear responsibility.</p>
 
 </div>
 </section>
@@ -277,28 +251,38 @@ High-risk clinical events involving delay, deterioration, or unclear responsibil
 <div class="container">
 <h2>Submit a case for triage</h2>
 
-<form id="form">
+<form id="form" novalidate>
 <input type="text" name="name" placeholder="Name" required>
 <input type="email" name="email" placeholder="Email" required>
 <textarea name="message" placeholder="Brief case description" required></textarea>
 
 <button type="submit">Request triage</button>
-<div class="success">Submission received. You will receive next steps by email.</div>
-</form>
+<div class="success">Submission received. You will receive next steps.</div>
+<div class="error" id="error"></div>
 
+</form>
 </div>
 </section>
 
 <script>
 const form=document.getElementById('form');
+const error=document.getElementById('error');
+
 form.addEventListener('submit',async e=>{
 e.preventDefault();
-const data=new FormData(form);
+error.textContent="";
+
+const email=form.email.value;
+
+if(!email.includes("@")){
+error.textContent="Valid email required";
+return;
+}
 
 try{
 const res=await fetch('https://formspree.io/f/mdapdwaq',{
 method:'POST',
-body:data,
+body:new FormData(form),
 headers:{'Accept':'application/json'}
 });
 
@@ -306,10 +290,10 @@ if(res.ok){
 form.reset();
 document.querySelector('.success').style.display='block';
 }else{
-alert('Submission failed');
+error.textContent="Submission failed";
 }
 }catch{
-alert('Error occurred');
+error.textContent="Network error";
 }
 });
 </script>
